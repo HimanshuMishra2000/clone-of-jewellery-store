@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <style>
+      * {
+        text-align: center;
+      }
+      input {
+        padding: 5px;
+      }
+      button {
+        width: max-content;
+        margin: 10px auto;
+        padding: 5px 15px;
+        color: white;
+        background-color: rgb(226, 193, 131);
+        border: 1px solid grey;
+        border-radius: 10%;
+        cursor: pointer;
+      }
+      form {
+        width: 30%;
+        padding: 15px;
+        height: 250px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-shadow: 0 0 5px 5px rgba(1, 1, 1, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <div class="form">
+      <form id="checkout">
+        <input type="text" id="address" placeholder="address" />
+        <input type="text" id="area" placeholder="area" />
+        <input type="text" id="city" placeholder="city" />
+        <input type="text" id="pincode" placeholder="Pincode" />
+        <button onclick="pay(event)">Proceed to Pay</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  function pay(e) {
+    e.preventDefault();
+    window.location.href = "payment.html";
+  }
+</script>
